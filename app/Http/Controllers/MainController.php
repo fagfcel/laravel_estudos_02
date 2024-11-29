@@ -10,6 +10,7 @@ class MainController extends Controller
     //
     public function showView():view
     {
-        return view('home');
+        return view('admin.newPage3');
     }
+
 }
