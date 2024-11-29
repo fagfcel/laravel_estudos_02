@@ -10,7 +10,7 @@ class MainController extends Controller
     //
     public function showView():view
     {
-        return view('home', ['name'=> 'Francisco Ferreira']);
+        return view('home', ['value'=> 100]);
     }
 
 }
