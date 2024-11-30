@@ -1,19 +1,21 @@
 @extends('layouts.main_layout')
 @section('content')
-    {{-- Switch --}}
-    @switch($value)
-        @case(100)
-            <h1>Valor 100</h1>
-            
-            @break
-        @case(200)
-            <h1>Valor 200</h1>
-            @break
-        @case(300)
-            <h1>Valor 300</h1>
-            @break
-        @default
-        <h1>Outro valor!</h1>
-            
-    @endswitch
+   {{-- Empty --}}
+   @empty($value)
+   <h1>Não existe!</h1>
+    @else
+    <h1>Existe!</h1>
+   @endempty
+
+   {{-- isset --}}
+   @isset($values   )
+       <h1>Existe a variavel!</h1>
+       @else
+       <h1>Não existe a variavel</h1>
+   @endisset
+
+   {{-- unless --}}
+   @unless ($value != 100)
+       <h1>OK!!!!</h1>
+   @endunless
 @endsection
